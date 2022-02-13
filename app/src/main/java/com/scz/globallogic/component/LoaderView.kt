@@ -23,7 +23,7 @@ class LoaderView(private val context: Context) {
         }
     }
 
-    private val isShowing = dialog.isShowing
+    private val isShowing get() = dialog.isShowing
 
     fun showProgress() {
         if (isShowing.not()) {
