@@ -1,2 +1,2 @@
-# globallogic
+# Pokeapi
 Pokeapi Study for GlobalLogic 
