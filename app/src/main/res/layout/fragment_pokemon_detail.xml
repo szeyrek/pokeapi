@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="adapterMove"
+            type="com.scz.globallogic.presentation.MoveAdapter" />
+
+        <variable
+            name="adapterStat"
+            type="com.scz.globallogic.presentation.StatAdapter" />
+
+        <variable
+            name="viewModel"
+            type="com.scz.globallogic.presentation.detail.FRPokemonDetailVM" />
+    </data>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/llStats"
+                showIfTrue="@{viewModel.pokemon.stats.size() != 0}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvStats"
+                    style="@style/PokemonHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/pokemon_detail_001" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvStatName"
+                        style="@style/PokemonLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/pokemon_detail_003" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvBaseStat"
+                        style="@style/PokemonLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/pokemon_detail_004" />
+
+                    <com.google.android.material.textview.MaterialTextView
+                        android:id="@+id/tvEffort"
+                        style="@style/PokemonLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/pokemon_detail_005" />
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvStats"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    app:rvAdapter="@{adapterStat}" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/llMoves"
+                showIfTrue="@{viewModel.pokemon.moves.size() != 0}"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.google.android.material.textview.MaterialTextView
+                    android:id="@+id/tvMoves"
+                    style="@style/PokemonHeader"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:gravity="center"
+                    android:text="@string/pokemon_detail_002" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/rvMoves"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:orientation="vertical"
+                    app:rvAdapter="@{adapterMove}" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</layout>

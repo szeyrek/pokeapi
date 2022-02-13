@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Pokepedia</string>
+
+    <string name="pokepedia_001">Pokepedia</string>
+
+    <string name="pokemon_form_001">Id</string>
+    <string name="pokemon_form_002">Id must be in range 1..898</string>
+    <string name="pokemon_form_003">Moves - Stats</string>
+    <string name="pokemon_form_004">GET BY ID</string>
+    <string name="pokemon_form_005">Random Pokemon</string>
+
+    <string name="pokemon_detail_001">Stats</string>
+    <string name="pokemon_detail_002">Moves</string>
+    <string name="pokemon_detail_003">Stat Name</string>
+    <string name="pokemon_detail_004">Base Stat</string>
+    <string name="pokemon_detail_005">Effort</string>
+
+    <string name="pokemon_history_001">History</string>
+    <string name="pokemon_history_002">You don\'t have any pokemon in history</string>
+    <string name="pokemon_history_003">Pokemon Id</string>
+    <string name="pokemon_history_004">Pokemon Name</string>
+
+    <string name="menu_001">Pokemon</string>
+    <string name="menu_002">History</string>
+
+    <string name="error">Error</string>
+    <string name="ok">OK</string>
+</resources>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_dashboard"
+    app:startDestination="@id/FRPickPokemon">
+
+    <fragment
+        android:id="@+id/FRPickPokemon"
+        android:name="com.scz.globallogic.presentation.pokemon.FRPickPokemon"
+        android:label="@string/pokepedia_001">
+        <action
+            android:id="@+id/toFRPokemonDetail"
+            app:destination="@id/FRPokemonDetail" />
+    </fragment>
+    <fragment
+        android:id="@+id/FRPokemonHistory"
+        android:name="com.scz.globallogic.presentation.history.FRPokemonHistory"
+        android:label="@string/pokemon_history_001" />
+    <fragment
+        android:id="@+id/FRPokemonDetail"
+        android:name="com.scz.globallogic.presentation.detail.FRPokemonDetail">
+        <argument
+            android:name="hideNavigation"
+            android:defaultValue="true"
+            app:argType="boolean" />
+        <argument
+            android:name="id"
+            app:argType="integer" />
+        <argument
+            android:name="pokemonName"
+            app:argType="string" />
+    </fragment>
+</navigation>

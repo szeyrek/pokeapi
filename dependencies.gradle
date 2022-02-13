@@ -1,0 +1,30 @@
+ext.dVersions = [
+        ktx              : '1.7.0',
+        material         : '1.5.0',
+        constraint_layout: '2.1.3',
+        hilt             : '2.37',
+        hiltLifecycle    : '1.0.0-alpha03',
+        hiltCompilier    : '1.0.0',
+        naVersion        : '2.4.1',
+        retrofit         : '2.9.0',
+        moshi            : '2.9.0',
+        okhttpinterceptor: '4.9.1',
+        coroutines       : '1.5.2',
+        glide            : '4.12.0',
+        lifecycle        : '2.4.1',
+        room             : '2.4.1',
+        mockk            : '1.12.0',
+        turbine          : '0.5.2',
+        truth            : '1.0.1'
+]
+
+ext.appVersions = [
+        version    : '1.0',
+        minSdk     : 21,
+        targetSdk  : 31,
+        versionCode: 1
+]
+
+ext.envVariables = [
+        pokeApiBaseUrl: '"https://pokeapi.co/api/v2/"'
+]
