@@ -1,5 +1,5 @@
 # Pokeapi
-Pokeapi Study for GlobalLogic 
+Pokeapi Study
 
 # Pokeapi
 Pokeapi is implementation of small app that provides random pokemon information by fetching from https://pokeapi.co/api/v2/. Also provides seen pokemon history and information of specific pokemon with id's.
